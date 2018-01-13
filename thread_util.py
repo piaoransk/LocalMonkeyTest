@@ -140,18 +140,20 @@ def get_battery():
 # getcpuinfo()
 # getmeminfo()
 import pickle
-path="pickle.pkl"
-s=getcpuinfo()
-f=open(path, 'a+')
-data1= Pickle.dump(s, f)
+# path="pickle.pkl"
+path=r'C:\Users\yuhui\Documents\GitHub\monkeyTest\info\192.168.179.101_5555_battery.pickle'
+# s=getcpuinfo()
+# f=open(path, 'a+')
+# data1= Pickle.dump(s, f)
 # print data1
-with open(path, 'a+') as f:
-    data2= pickle.load(f)
-print data2.items()
-print data2.keys()
-
+# with open(path, 'a+') as f:
+#     data2= pickle.load(f)
+# print data2.items()
+# print data2.keys()
+import os
 def readInfo(path):
     data = []
+    print os.path.exists(path)
     with open(path, 'a+') as f:
         try:
             data = pickle.load(f)
@@ -160,22 +162,24 @@ def readInfo(path):
         except EOFError:
             data = []
             print("读取文件错误")
+            print path
     print("------read-------")
     print(path)
     print(data)
     return data
-
-devices=['192.168.179.101:5555', '1234567']
-_app = {}
-devices_Pool=[]
-for item in range(0, len(devices)):
-    if ':' in devices[item]:
-        print '替换 :'
-        de=devices[item].replace(':', ' ')  # device 包含':' ,无法写入文件名,因为文件名不能有特殊符号
-        print 'de:',de
-        _app["devices"+str(item)] = de
-    else:
-        _app["devices"+str(item)] = devices[item]
-    _app["num"] = len(devices)
-    devices_Pool.append(_app)
-print devices_Pool
+path=r'C:\Users\yuhui\Documents\GitHub\monkeyTest\info\192.168.179.101_5555_battery.pickle'
+readInfo(path)
+# devices=['192.168.179.101:5555', '1234567']
+# _app = {}
+# devices_Pool=[]
+# for item in range(0, len(devices)):
+#     if ':' in devices[item]:
+#         print '替换 :'
+#         de=devices[item].replace(':', ' ')  # device 包含':' ,无法写入文件名,因为文件名不能有特殊符号
+#         print 'de:',de
+#         _app["devices"+str(item)] = de
+#     else:
+#         _app["devices"+str(item)] = devices[item]
+#     _app["num"] = len(devices)
+#     devices_Pool.append(_app)
+# print devices_Pool
