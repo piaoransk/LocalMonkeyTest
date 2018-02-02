@@ -1,0 +1,95 @@
+C:\Python27\python.exe E:/TestScript/python/LocalMonkeyTest/LocalMonkeyTest/main.py
+Thu Feb 01 16:20:57 2018
+['List of devices attached\n', '192.168.179.101:5555\tdevice\n', '\n']
+getdevices():  ['192.168.179.101:5555']
+pkg: ,com.android.browser
+devices , 192.168.179.101:5555
+----get_uid-------
+adb -s 192.168.179.101:5555 shell dumpsys package com.android.browser | findstr userId=
+uid : 10022
+adb -s 192.168.179.101:5555 shell monkey -p com.android.browser -v 500 > moonkey_log.log
+--------------
+start: Thu Feb 01 16:20:58 2018
+_____cpu_info_____
+adb -s 192.168.179.101:5555 shell "dumpsys cpuinfo | grep com.android.browser"
+[]
+0%
+cpu_info: Thu Feb 01 16:20:59 2018
+adb -s 192.168.179.101:5555 shell "dumpsys meminfo | grep com.android.browser"
+____get meninfo________
+['36169', 'kB:', 'com.android.browser', '(pid', '1834', '/', 'activities)']
+men_info: Thu Feb 01 16:21:00 2018
+battery_info: Thu Feb 01 16:21:00 2018
+----get_flow_new-------
+adb -s 192.168.179.101:5555 shell cat /proc/uid_stat/10022/tcp_rcv
+upflow_info: Thu Feb 01 16:21:01 2018
+downflow_info: Thu Feb 01 16:21:01 2018
+start: Thu Feb 01 16:21:02 2018
+_____cpu_info_____
+adb -s 192.168.179.101:5555 shell "dumpsys cpuinfo | grep com.android.browser"
+['+0%', '1834/com.android.browser:', '0%', 'user', '+', '0%', 'kernel']
++0%
+cpu_info: Thu Feb 01 16:21:03 2018
+adb -s 192.168.179.101:5555 shell "dumpsys meminfo | grep com.android.browser"
+____get meninfo________
+['70661', 'kB:', 'com.android.browser', '(pid', '1834', '/', 'activities)']
+men_info: Thu Feb 01 16:21:05 2018
+battery_info: Thu Feb 01 16:21:06 2018
+----get_flow_new-------
+adb -s 192.168.179.101:5555 shell cat /proc/uid_stat/10022/tcp_rcv
+upflow_info: Thu Feb 01 16:21:06 2018
+downflow_info: Thu Feb 01 16:21:06 2018
+start: Thu Feb 01 16:21:07 2018
+_____cpu_info_____
+adb -s 192.168.179.101:5555 shell "dumpsys cpuinfo | grep com.android.browser"
+['+0%', '1834/com.android.browser:', '0%', 'user', '+', '0%', 'kernel']
++0%
+cpu_info: Thu Feb 01 16:21:08 2018
+adb -s 192.168.179.101:5555 shell "dumpsys meminfo | grep com.android.browser"
+____get meninfo________
+['74668', 'kB:', 'com.android.browser', '(pid', '1834', '/', 'activities)']
+men_info: Thu Feb 01 16:21:10 2018
+battery_info: Thu Feb 01 16:21:10 2018
+----get_flow_new-------
+adb -s 192.168.179.101:5555 shell cat /proc/uid_stat/10022/tcp_rcv
+upflow_info: Thu Feb 01 16:21:11 2018
+downflow_info: Thu Feb 01 16:21:11 2018
+start: Thu Feb 01 16:21:12 2018
+_____cpu_info_____
+adb -s 192.168.179.101:5555 shell "dumpsys cpuinfo | grep com.android.browser"
+['12%', '1834/com.android.browser:', '4.4%', 'user', '+', '7.9%', 'kernel', '/', 'faults:', '33940', 'minor', '12', 'major']
+12%
+cpu_info: Thu Feb 01 16:21:14 2018
+adb -s 192.168.179.101:5555 shell "dumpsys meminfo | grep com.android.browser"
+____get meninfo________
+['113155', 'kB:', 'com.android.browser', '(pid', '1834', '/', 'activities)']
+men_info: Thu Feb 01 16:21:16 2018
+battery_info: Thu Feb 01 16:21:16 2018
+----get_flow_new-------
+adb -s 192.168.179.101:5555 shell cat /proc/uid_stat/10022/tcp_rcv
+upflow_info: Thu Feb 01 16:21:17 2018
+downflow_info: Thu Feb 01 16:21:17 2018
+start: Thu Feb 01 16:21:18 2018
+_____cpu_info_____
+adb -s 192.168.179.101:5555 shell "dumpsys cpuinfo | grep com.android.browser"
+['21%', '1834/com.android.browser:', '5.7%', 'user', '+', '16%', 'kernel', '/', 'faults:', '52084', 'minor', '1', 'major']
+21%
+cpu_info: Thu Feb 01 16:21:19 2018
+adb -s 192.168.179.101:5555 shell "dumpsys meminfo | grep com.android.browser"
+____get meninfo________
+['102623', 'kB:', 'com.android.browser', '(pid', '1834', '/', 'activities)']
+men_info: Thu Feb 01 16:21:20 2018
+battery_info: Thu Feb 01 16:21:20 2018
+----get_flow_new-------
+adb -s 192.168.179.101:5555 shell cat /proc/uid_stat/10022/tcp_rcv
+upflow_info: Thu Feb 01 16:21:21 2018
+downflow_info: Thu Feb 01 16:21:21 2018
+Print system info after test is end!
+['361', '706', '746', '1131', '1026']
+['0%', '+0%', '+0%', '12%', '21%']
+['99', '99', '99', '99', '99']
+['/system/bin/sh: cat: /proc/uid_stat/10022/tcp_snd: No such file or directory', '/system/bin/sh: cat: /proc/uid_stat/10022/tcp_snd: No such file or directory', '/system/bin/sh: cat: /proc/uid_stat/10022/tcp_snd: No such file or directory', '/system/bin/sh: cat: /proc/uid_stat/10022/tcp_snd: No such file or directory', '/system/bin/sh: cat: /proc/uid_stat/10022/tcp_snd: No such file or directory']
+['/system/bin/sh: cat: /proc/uid_stat/10022/tcp_rcv: No such file or directory', '/system/bin/sh: cat: /proc/uid_stat/10022/tcp_rcv: No such file or directory', '/system/bin/sh: cat: /proc/uid_stat/10022/tcp_rcv: No such file or directory', '/system/bin/sh: cat: /proc/uid_stat/10022/tcp_rcv: No such file or directory', '/system/bin/sh: cat: /proc/uid_stat/10022/tcp_rcv: No such file or directory']
+Thu Feb 01 16:21:21 2018
+
+Process finished with exit code 0

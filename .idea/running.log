@@ -1,0 +1,211 @@
+C:\Python27\python.exe C:/Users/yuhui/Documents/GitHub/monkeyTest/monkeyTest.py
+======================
+***  2017-12-4***
+***     v1.0.0     ***
+======================
+---------------------------
+Checking adb port...
+???: ????? PID ? 10944 ??????
+????: ?????????? "10944"??
+????: ?????????? "10944"??
+????: ?????????? "17848"??
+????: ?????????? "14948"??
+---------------------------
+adb port has been released!
+---------------------------
+adb devices
+['192.168.179.101:5555']
+[{'num': 1, 'devices': '192.168.179.101:5555'}]
+devices: 192.168.179.101:5555
+adb -s 192.168.179.101:5555 shell wm size
+adb -s 192.168.179.101:5555 shell cat /proc/meminfo
+adb -s 192.168.179.101:5555 shell 'getprop'
+adb -s 192.168.179.101:5555 shell cat /proc/cpuinfo
+创建文件成功
+创建文件成功
+创建文件成功
+创建文件成功
+创建文件成功
+创建文件成功
+创建文件成功
+writeSum Base.BasePickle
+------writeSum-------
+1
+adb -s 192.168.179.101:5555 shell monkey -p com.zzl.falcon.internal -v 600>C:\Users\yuhui\Documents\GitHub\monkeyTest\log\fac503c9-8f3b-4fbf-8d03-92f4a777c998monkey.log
+----get_pid-------
+adb -s 192.168.179.101:5555 shell ps | findstr com.zzl.falcon.internal
+adb -s 192.168.179.101:5555 shell cat /proc/cpuinfo
+adb -s 192.168.179.101:5555 shell dumpsys battery
+Current.Battery.Service.state:.AC.powered:.true.USB.powered:.false.Wireless.powered:.false.status:.1.health:.1.present:.true.level:.98.scale:.100.voltage:.10000.temperature:.0.technology:.Unknown
+writeInfo start ------
+读取文件错误
+错误路径: C:\Users\yuhui\Documents\GitHub\monkeyTest\info\192.168.179.101_5555_battery.pickle
+------read-------
+C:\Users\yuhui\Documents\GitHub\monkeyTest\info\192.168.179.101_5555_battery.pickle
+[]
+------writeInfo-------
+[98]
+writeInfo END------------
+start------------123
+star()----1
+writeInfo start ------
+读取文件错误
+错误路径: C:\Users\yuhui\Documents\GitHub\monkeyTest\info\192.168.179.101_5555_cpu.pickle
+------read-------
+C:\Users\yuhui\Documents\GitHub\monkeyTest\info\192.168.179.101_5555_cpu.pickle
+[]
+------writeInfo-------
+[0.027999999999999997]
+writeInfo END------------
+cpu:  0.028
+adb -s 192.168.179.101:5555 shell  dumpsys  meminfo |grep com.zzl.falcon.internal
+men2: 101670
+writeInfo start ------
+读取文件错误
+错误路径: C:\Users\yuhui\Documents\GitHub\monkeyTest\info\192.168.179.101_5555_men.pickle
+------read-------
+C:\Users\yuhui\Documents\GitHub\monkeyTest\info\192.168.179.101_5555_men.pickle
+[]
+------writeInfo-------
+[101670]
+writeInfo END------------
+adb -s 192.168.179.101:5555 shell dumpsys gfxinfo com.zzl.falcon.internal
+writeInfo start ------
+读取文件错误
+错误路径: C:\Users\yuhui\Documents\GitHub\monkeyTest\info\192.168.179.101_5555_fps.pickle
+------read-------
+C:\Users\yuhui\Documents\GitHub\monkeyTest\info\192.168.179.101_5555_fps.pickle
+[]
+------writeInfo-------
+[60]
+writeInfo END------------
+-----fps------
+60
+mc vm : virtual_machine
+type: virtual_machine
+adb -s 192.168.179.101:5555 shell cat /proc/4682/net/dev
+-----flow---------
+11966161
+开始: Base.BasePickle
+---data-----
+上行流量=11966161
+下行流量=370702
+读取文件错误
+错误路径: C:\Users\yuhui\Documents\GitHub\monkeyTest\info\192.168.179.101_5555_flow.pickle
+------read-------
+C:\Users\yuhui\Documents\GitHub\monkeyTest\info\192.168.179.101_5555_flow.pickle
+[]
+------writeFlowInfo-------
+[[11966161], [370702]]
+结束: Base.BasePickle
+adb -s 192.168.179.101:5555 shell dumpsys battery
+Current.Battery.Service.state:.AC.powered:.true.USB.powered:.false.Wireless.powered:.false.status:.1.health:.1.present:.true.level:.98.scale:.100.voltage:.10000.temperature:.0.technology:.Unknown
+writeInfo start ------
+data: [98]
+------read-------
+C:\Users\yuhui\Documents\GitHub\monkeyTest\info\192.168.179.101_5555_battery.pickle
+[98]
+------writeInfo-------
+[98, 98]
+writeInfo END------------
+192.168.179.101:5555测试完成咯
+writeSum Base.BasePickle
+data: 1
+------read-------
+C:\Users\yuhui\Documents\GitHub\monkeyTest\info\sumInfo.pickle
+1
+------writeSum-------
+0
+adb -s 192.168.179.101:5555 shell dumpsys battery
+Current.Battery.Service.state:.AC.powered:.true.USB.powered:.false.Wireless.powered:.false.status:.1.health:.1.present:.true.level:.98.scale:.100.voltage:.10000.temperature:.0.technology:.Unknown
+writeInfo start ------
+data: [98, 98]
+------read-------
+C:\Users\yuhui\Documents\GitHub\monkeyTest\info\192.168.179.101_5555_battery.pickle
+[98, 98]
+------writeInfo-------
+[98, 98, 98]
+writeInfo END------------
+writeInfo start ------
+读取文件错误
+错误路径: C:\Users\yuhui\Documents\GitHub\monkeyTest\info\info.pickle
+------read-------
+C:\Users\yuhui\Documents\GitHub\monkeyTest\info\info.pickle
+[]
+------writeInfo-------
+[{'192.168.179.101:5555': {'battery': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_battery.pickle', 'men': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_men.pickle', 'flow': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_flow.pickle', 'header': {'monkey_log': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\log\\fac503c9-8f3b-4fbf-8d03-92f4a777c998monkey.log', 'kel': '4\xe6\xa0\xb8', 'rom': 2051740, 'afterBattery': 98, 'beforeBattery': 98, 'pix': u'768x1280', 'time': '2\xe7\xa7\x92', 'net': u'wifi', 'phone_name': u'.geny-def]:_.geny-def]:_]:'}, 'fps': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_fps.pickle', 'cpu': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_cpu.pickle'}}]
+writeInfo END------------
+data: 0
+------read-------
+C:\Users\yuhui\Documents\GitHub\monkeyTest\info\sumInfo.pickle
+0
+data: [{'192.168.179.101:5555': {'battery': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_battery.pickle', 'men': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_men.pickle', 'flow': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_flow.pickle', 'header': {'monkey_log': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\log\\fac503c9-8f3b-4fbf-8d03-92f4a777c998monkey.log', 'kel': '4\xe6\xa0\xb8', 'rom': 2051740, 'beforeBattery': 98, 'afterBattery': 98, 'pix': u'768x1280', 'time': '2\xe7\xa7\x92', 'net': u'wifi', 'phone_name': u'.geny-def]:_.geny-def]:_]:'}, 'fps': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_fps.pickle', 'cpu': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_cpu.pickle'}}]
+------read-------
+C:\Users\yuhui\Documents\GitHub\monkeyTest\info\info.pickle
+[{'192.168.179.101:5555': {'battery': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_battery.pickle', 'men': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_men.pickle', 'flow': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_flow.pickle', 'header': {'monkey_log': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\log\\fac503c9-8f3b-4fbf-8d03-92f4a777c998monkey.log', 'kel': '4\xe6\xa0\xb8', 'rom': 2051740, 'beforeBattery': 98, 'afterBattery': 98, 'pix': u'768x1280', 'time': '2\xe7\xa7\x92', 'net': u'wifi', 'phone_name': u'.geny-def]:_.geny-def]:_]:'}, 'fps': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_fps.pickle', 'cpu': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_cpu.pickle'}}]
+[{'192.168.179.101:5555': {'battery': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_battery.pickle', 'men': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_men.pickle', 'flow': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_flow.pickle', 'header': {'monkey_log': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\log\\fac503c9-8f3b-4fbf-8d03-92f4a777c998monkey.log', 'kel': '4\xe6\xa0\xb8', 'rom': 2051740, 'beforeBattery': 98, 'afterBattery': 98, 'pix': u'768x1280', 'time': '2\xe7\xa7\x92', 'net': u'wifi', 'phone_name': u'.geny-def]:_.geny-def]:_]:'}, 'fps': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_fps.pickle', 'cpu': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_cpu.pickle'}}]
+data: [{'192.168.179.101:5555': {'battery': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_battery.pickle', 'men': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_men.pickle', 'flow': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_flow.pickle', 'header': {'monkey_log': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\log\\fac503c9-8f3b-4fbf-8d03-92f4a777c998monkey.log', 'kel': '4\xe6\xa0\xb8', 'rom': 2051740, 'beforeBattery': 98, 'afterBattery': 98, 'pix': u'768x1280', 'time': '2\xe7\xa7\x92', 'net': u'wifi', 'phone_name': u'.geny-def]:_.geny-def]:_]:'}, 'fps': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_fps.pickle', 'cpu': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_cpu.pickle'}}]
+------read-------
+C:\Users\yuhui\Documents\GitHub\monkeyTest\info\info.pickle
+[{'192.168.179.101:5555': {'battery': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_battery.pickle', 'men': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_men.pickle', 'flow': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_flow.pickle', 'header': {'monkey_log': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\log\\fac503c9-8f3b-4fbf-8d03-92f4a777c998monkey.log', 'kel': '4\xe6\xa0\xb8', 'rom': 2051740, 'beforeBattery': 98, 'afterBattery': 98, 'pix': u'768x1280', 'time': '2\xe7\xa7\x92', 'net': u'wifi', 'phone_name': u'.geny-def]:_.geny-def]:_]:'}, 'fps': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_fps.pickle', 'cpu': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_cpu.pickle'}}]
+info: [{'192.168.179.101:5555': {'battery': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_battery.pickle', 'men': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_men.pickle', 'flow': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_flow.pickle', 'header': {'monkey_log': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\log\\fac503c9-8f3b-4fbf-8d03-92f4a777c998monkey.log', 'kel': '4\xe6\xa0\xb8', 'rom': 2051740, 'beforeBattery': 98, 'afterBattery': 98, 'pix': u'768x1280', 'time': '2\xe7\xa7\x92', 'net': u'wifi', 'phone_name': u'.geny-def]:_.geny-def]:_]:'}, 'fps': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_fps.pickle', 'cpu': 'C:\\Users\\yuhui\\Documents\\GitHub\\monkeyTest\\info\\192.168.179.101:5555_cpu.pickle'}}]
+data: [0.027999999999999997]
+------read-------
+C:\Users\yuhui\Documents\GitHub\monkeyTest\info\192.168.179.101_5555_cpu.pickle
+[0.027999999999999997]
+data: [101670]
+------read-------
+C:\Users\yuhui\Documents\GitHub\monkeyTest\info\192.168.179.101_5555_men.pickle
+[101670]
+data: [60]
+------read-------
+C:\Users\yuhui\Documents\GitHub\monkeyTest\info\192.168.179.101_5555_fps.pickle
+[60]
+data: [[11966161], [370702]]
+------read-------
+C:\Users\yuhui\Documents\GitHub\monkeyTest\info\192.168.179.101_5555_flow.pickle
+[[11966161], [370702]]
+----wrap-----
+[[11966161], [370702]]
+debug____徐育辉G
+111
+debug____徐育辉H
+debug____徐育辉I
+men=[101670]
+debug____徐育辉J
+[0.0]
+here
+def:maxFlow
+[[11966161], [370702]]
+[[11966161], [370702]]
+_flowUp: [11685]
+_flowDown: [362]
+-----_maxFlow----------
+('11685KB', '362KB')
+debug____徐育辉O
+debug____徐育辉Q
+------data-----
+data: [0.027999999999999997]
+------read-------
+C:\Users\yuhui\Documents\GitHub\monkeyTest\info\192.168.179.101_5555_cpu.pickle
+[0.027999999999999997]
+data: [101670]
+------read-------
+C:\Users\yuhui\Documents\GitHub\monkeyTest\info\192.168.179.101_5555_men.pickle
+[101670]
+data: [60]
+------read-------
+C:\Users\yuhui\Documents\GitHub\monkeyTest\info\192.168.179.101_5555_fps.pickle
+[60]
+data: [98, 98, 98]
+------read-------
+C:\Users\yuhui\Documents\GitHub\monkeyTest\info\192.168.179.101_5555_battery.pickle
+[98, 98, 98]
+data: [[11966161], [370702]]
+------read-------
+C:\Users\yuhui\Documents\GitHub\monkeyTest\info\192.168.179.101_5555_flow.pickle
+[[11966161], [370702]]
+wd close
+------来吧------
+
+Process finished with exit code 0
