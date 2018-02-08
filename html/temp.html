@@ -2,56 +2,21 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <style>
-        .top {
-            position: absolute;
-            left: 0;
-            right: 0;
-            height: 72px;
-        }
 
-        .sidebar {
-            position: absolute;
-            left: 0;
-            top: 72px;
-            bottom: 0;
-            width: 178px;
-        }
+        .task-result-title {
 
-        .content {
-            position: absolute;
-            left: 178px;
-            top: 72px;
-            right: 0;
-            bottom: 0;
-        }
+            color: transparent;
+            background-color: black;
+            text-shadow: rgba(255, 255, 255, 0.5) 0 5px 6px, rgba(255, 255, 255, 0.2) 1px 3px 3px;
+            -webkit-background-clip: text;
 
-        #sideToggle {
-            display: none;
-        }
-
-        .sidebar {
-            display: none;
-        }
-
-        .content {
-            position: absolute;
-            left: 0;
-            top: 72px;
-            right: 0;
-            bottom: 0;
-        }
-
-        #sideToggle:checked + .sidebar {
-            display: block
-        }
-
-        #sideToggle:checked ~ .content {
-            left: 178px
         }
 
         table, table td, table th {
             border: 1px solid #73777A;
             border-collapse: collapse;
+            white-space: nowrap;
+            vertical-align: middle;
         }
 
         max {
@@ -91,23 +56,22 @@
             target="_blank">查看日志</a></span>
     </p>
 
-    <table width="824" border="1" align="left" cellpadding="2" cellspacing="0" bordercolor="#000000"
-           style="width:50%;table-layout:fixed;word-break:break-all;background:#f2f2f2">
+    <table>
         <tbody>
         <tr>
-            <td width="90">
+            <td>
                 <span style="color:#35B34A;">安装</span><br/>
             </td>
-            <td width="341">
+            <td>
                 <span style="color:#35B34A;">启动(</span><span style="color:#35B34A;">%(TIME)d&nbsp;</span><span
                     style="color:#35B34A;">ms)</span><br/>
             </td>
-            <td width="275">
+            <td>
                 <span style="color:#F15533;">Ripper</span><span style="color:#F15533;">智能</span><span
                     style="color:#F15533;">探索</span><br/>
             </td>
-            <td width="92" align="left">
-                <p><span style="color:#35B34A;">卸</span><span style="color:#35B34A;">载</span><span></span></p>
+            <td align="left">
+                <p><span style="color:#35B34A;">卸载</span></p>
             </td>
         </tr>
         </tbody>
@@ -119,62 +83,66 @@
     <p>
         <br/>
     </p>
-
-    <p>异常汇总 </p>
-    <p> Crash 检测到了 %(crash_num)d 个</p>
-    <p> 1. Crash: java.io.IOException: No such file or directory
-
-        共 2 次复现问题</p>
-    <p> Exception 检测到了 %(exception_num)d 个 </p>
-    <p>1. Exception: java.io.FileNotFoundException: /storage/emulated/0/com.qianshi.dedaojin/nim/log/nim_sdk.log (No
-        such file or directory)
-        共 168 次 </p>
-    <p>2. Exception: java.io.FileNotFoundException: /storage/emulated/0/com.qianshi.dedaojin/log/20170829.log (No such
-        file or directory)
-        共 66 次 </p>
-    <p>3. Exception: org.json.JSONException: Value ok of type java.lang.String cannot be converted to JSONObject:
-        [Caught Exception in decryptData()]
-
-        共 5 次 </p>
-    <div class="task-result process-detail"
-         style="margin:0px 0px 30px;padding:0px;border:0px;color:#373D41;font-family:&quot;font-size:14px;background-color:#FFFFFF;">
+    <div class="menkeylog">
         <h3 class="task-result-header" style="font-family:inherit;font-weight:500;font-size:20px;">
-            <span class="task-result-title"><strong>进程详情</strong></span>&nbsp;<span
+            <span class="task-result-title">异常汇总</span>&nbsp;<span
                 class="task-result-title-accessory"></span><span class="task-result-top-right-links"
                                                                  style="font-size:14px;"></span>
         </h3>
-        <div class="task-result-content" style="margin:0px;padding:0px;border:0px;">
-            <table class="table table-left" style="background-color:transparent;width:923px;font-size:12px;">
+        <p> Crash 检测到了 %(c rash_num)d 个</p>
+        <p> 1. Crash: java.io.IOException: No such file or directory
+
+            共 2 次复现问题</p>
+        <p> Exception 检测到了 %(exception_num)d 个 </p>
+        <p>1. Exception: java.io.FileNotFoundException: /storage/emulated/0/com.qianshi.dedaojin/nim/log/nim_sdk.log (No
+            such file or directory)
+            共 168 次 </p>
+        <p>2. Exception: java.io.FileNotFoundException: /storage/emulated/0/com.qianshi.dedaojin/log/20170829.log (No
+            such
+            file or directory)
+            共 66 次 </p>
+        <p>3. Exception: org.json.JSONException: Value ok of type java.lang.String cannot be converted to JSONObject:
+            [Caught Exception in decryptData()]
+
+            共 5 次 </p>
+
+    </div>
+    <div class="task-result process-detail"
+         style="margin:0px 0px 30px;padding:0px;border:0px;color:#373D41;font-family:&quot;font-size:14px;background-color:#FFFFFF;">
+        <h3 class="task-result-header" style="font-family:inherit;font-weight:500;font-size:20px;">
+            <span class="task-result-title">进程详情</span>&nbsp;<span
+                class="task-result-title-accessory"></span><span class="task-result-top-right-links"
+                                                                 style="font-size:14px;"></span>
+        </h3>
+        <div class="pure-table">
+            <table>
                 <tbody>
                 <tr>
-                    <th width="30%" style="text-align:left;vertical-align:bottom;font-weight:normal;color:#73777A;">
+                    <th>
                         进程
                     </th>
-                    <th width="30%" style="text-align:left;vertical-align:bottom;font-weight:normal;color:#73777A;">
+                    <th>
                         CPU利用率（平均/最大）
                     </th>
-                    <th width="20%" style="text-align:left;vertical-align:bottom;font-weight:normal;color:#73777A;">
+                    <th>
                         CPU时间（s）
                     </th>
-                    <th width="20%" style="text-align:left;vertical-align:bottom;font-weight:normal;color:#73777A;">
-                        最大内存占用（MB）
+                    <th>
+                            最大内存占用（MB）
                     </th>
                 </tr>
                 </tbody>
                 <tbody>
                 <tr>
-                    <td style="vertical-align:middle;">
-                        <div style="margin:0px;padding:0px;border:0px;vertical-align:middle;">
-                            com.qianshi.dedaojin
-                        </div>
+                    <td>
+                        com.qianshi.dedaojin
                     </td>
-                    <td style="vertical-align:middle;">
-						<span class="full"><span class="average" style="background-color:#DDE6E9;"></span><a>5%</a> 
-						<div style="margin:0px;padding:0px;border:0px;vertical-align:middle;">
-						</div>
-<span class="max" style="background-color:#00A2D3;"></span><a>24%</a></span>
+                    <td>
+                        <a>5%</a>
+                        <div></div>
+                        <a>24%</a>
                     </td>
-                    <td style="vertical-align:middle;">
+                    <td style="">
                         84.97
                     </td>
                     <td style="vertical-align:middle;">
@@ -182,35 +150,35 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="vertical-align:middle;">
-                        <div style="margin:0px;padding:0px;border:0px;vertical-align:middle;">
+                    <td>
+                        <div>
                             com.qianshi.dedaojin:mult
                         </div>
                     </td>
-                    <td style="vertical-align:middle;">
-						<span class="full"><span class="average" style="background-color:#DDE6E9;"></span><a>1%</a> 
-						<div style="margin:0px;padding:0px;border:0px;vertical-align:middle;">
-						</div>
-<span class="max" style="background-color:#00A2D3;"></span><a>1%</a></span>
+                    <td>
+                        <a>1%</a>
+                        <div>
+                        </div>
+                        <a>1%</a>
                     </td>
-                    <td style="vertical-align:middle;">
+                    <td>
                         3.76
                     </td>
-                    <td style="vertical-align:middle;">
+                    <td>
                         74.2
                     </td>
                 </tr>
                 <tr>
-                    <td style="vertical-align:middle;">
-                        <div style="margin:0px;padding:0px;border:0px;vertical-align:middle;">
+                    <td>
+                        <div>
                             com.qianshi.dedaojin:core
                         </div>
                     </td>
-                    <td style="vertical-align:middle;">
-						<span class="full"><span class="average" style="background-color:#DDE6E9;"></span><a>1%</a> 
-						<div style="margin:0px;padding:0px;border:0px;vertical-align:middle;">
-						</div>
-<span class="max" style="background-color:#00A2D3;"></span><a>1%</a></span>
+                    <td>
+                        <a>1%</a>
+                        <div>
+                        </div>
+                        <a>1%</a>
                     </td>
                     <td style="vertical-align:middle;">
                         3.53
@@ -341,7 +309,7 @@
 
                 // 获取 JSON 数据，数据文件地址：
                 //https://github.com/highcharts/highcharts/blob/master/samples/data/activity.json
-                $.getJSON('https://data.jianshukeji.com/jsonp?filename=json/activity.json&callback=?', function (activity) {
+                $.getJSON('https://github.com/highcharts/highcharts/blob/master/samples/data/activity.json', function (activity) {
                     $.each(activity.datasets, function (i, dataset) {
                         // 添加 X 数据
                         dataset.data = Highcharts.map(dataset.data, function (val, j) {

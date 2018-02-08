@@ -1,0 +1,38 @@
+
+{
+  "xData": ['17:33:44', '17:33:49'],
+  "datasets": [{
+    "name": "CPU",
+    "data": [],
+    "unit": "%",
+    "type": "line",
+    "valueDecimals": 1
+  }, {
+    "name": "内存",
+    "data": [],
+    "unit": "kb",
+    "type": "line",
+    "valueDecimals": 0
+  }, {
+    "name": "网络",
+    "data": [],
+    "unit": "kb",
+    "type": "line",
+    "valueDecimals": 0
+  }
+  , {
+    "name": "FPS",
+    "data": [],
+    "unit": "",
+    "type": "line",
+    "valueDecimals": 0
+  }
+    , {
+    "name": "电池",
+    "data": [],
+    "unit": "",
+    "type": "line",
+    "valueDecimals": 0
+  }
+  ]
+}

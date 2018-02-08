@@ -1,0 +1,47 @@
+
+{
+  "xData": ['17:46:10', '17:46:14', '17:46:20'],
+  "datasets": [{
+    "name": "CPU",
+    "data": ['21%', '0.5%', '2.3%'],
+    "unit": "%",
+    "type": "line",
+    "valueDecimals": 1
+  }, {
+    "name": "内存",
+    "data": ['112564', '112272', '111080'],
+    "unit": "kb",
+    "type": "line",
+    "valueDecimals": 0
+  }, {
+    "name": "上传网络",
+    "data": [[795142105, 832271074, 832629280]],
+    "unit": "kb",
+    "type": "line",
+    "valueDecimals": 0
+  }, 
+  {
+    "name": "下传网络",
+    "data": [[93799074, 112440024, 112477758]],
+    "unit": "kb",
+    "type": "line",
+    "valueDecimals": 0
+  }
+  
+  
+  , {
+    "name": "FPS",
+    "data": [[60, 60, 60]],
+    "unit": "",
+    "type": "line",
+    "valueDecimals": 0
+  }
+    , {
+    "name": "电池",
+    "data": [['100', '100', '100']],
+    "unit": "",
+    "type": "line",
+    "valueDecimals": 0
+  }
+  ]
+}
